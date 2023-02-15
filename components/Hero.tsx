@@ -32,16 +32,16 @@ const Hero: React.FunctionComponent<HeroProps> = (): JSX.Element => {
           <Cursor cursorColor="#f7ab0a" />
         </h1>
         <div className="z-10 pt-5">
-          <Link href="about">
+          <Link href="#about">
             <button className="heroButton">About</button>
           </Link>
-          <Link href="experience">
+          <Link href="#experience">
             <button className="heroButton">Experience</button>
           </Link>
-          <Link href="skills">
+          <Link href="#skills">
             <button className="heroButton">Skills</button>
           </Link>
-          <Link href="projects">
+          <Link href="#projects">
             <button className="heroButton">Projects</button>
           </Link>
         </div>
