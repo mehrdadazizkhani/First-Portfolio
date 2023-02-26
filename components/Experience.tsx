@@ -17,7 +17,7 @@ const Experience: React.FunctionComponent<
       <h3 className="absolute top-24 text-2xl uppercase tracking-[20px] text-gray-500">
         experience
       </h3>
-      <div className="flex w-full snap-x snap-mandatory space-x-5 overflow-x-scroll p-10">
+      <div className="flex w-full snap-x snap-mandatory space-x-5 overflow-x-scroll p-10 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#f7ab0a]/80">
         <ExperienceCard role="Front-End Developer" company="Quera" />
         <ExperienceCard role="Front-End Developer" company="Quera" />
         <ExperienceCard role="Front-End Developer" company="Quera" />

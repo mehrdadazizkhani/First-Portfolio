@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Link from "next/link";
 import React from "react";
 import { SocialIcon } from "react-social-icons";
 
@@ -6,7 +7,7 @@ interface HeaderProps extends React.PropsWithChildren {}
 
 const Header: React.FunctionComponent<HeaderProps> = (): JSX.Element => {
   return (
-    <header className="z-20 p-5 flex justify-between mx-auto sticky top-0  items-start xl:items-center container">
+    <header className="container sticky top-0 z-20 mx-auto flex items-start  justify-between p-5 xl:items-center">
       <motion.div
         initial={{
           x: -500,
@@ -28,13 +29,16 @@ const Header: React.FunctionComponent<HeaderProps> = (): JSX.Element => {
           url="https://github.com/mehrdadazizkhani"
           fgColor="grey"
           bgColor="transparent"
+          target="_blank"
         />
         <SocialIcon
           url="https://linkedin.com/in/mehrdad-azizkhani-2a8313a5"
           fgColor="grey"
           bgColor="transparent"
+          target="_blank"
         />
       </motion.div>
+      {/* <Link href="#contact"> */}
       <motion.div
         initial={{
           x: 500,
@@ -49,18 +53,19 @@ const Header: React.FunctionComponent<HeaderProps> = (): JSX.Element => {
         transition={{
           duration: 1,
         }}
-        className="flex items-center text-gray-300 cursor-pointer"
+        className="flex cursor-pointer items-center text-gray-300"
       >
         <SocialIcon
-          url="mehrdad.azizkhani@gmail.com"
+          className="cursor-pointer"
           network="email"
           fgColor="grey"
           bgColor="transparent"
         />
-        <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
+        <p className="hidden text-sm uppercase text-gray-400 md:inline-flex">
           Get In Touch
         </p>
       </motion.div>
+      {/* </Link> */}
     </header>
   );
 };

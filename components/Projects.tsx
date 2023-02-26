@@ -15,11 +15,11 @@ const Projects: React.FunctionComponent<ProjectsProps> = (): JSX.Element => {
       <h3 className="absolute top-24 text-2xl uppercase tracking-[20px] text-gray-500">
         Projects
       </h3>
-      <div className="relative z-20 flex w-full snap-x snap-mandatory overflow-y-hidden overflow-x-scroll">
+      <div className="relative z-20 flex w-full snap-x snap-mandatory overflow-x-scroll overflow-y-hidden scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#f7ab0a]/80">
         {projects.map((project, i) => (
           <div className="flex h-screen w-screen flex-shrink-0 snap-center flex-col items-center justify-center space-y-5 p-20 md:p-44">
             <motion.img
-              className=""
+              className="w-48"
               initial={{ y: -300, opacity: 0 }}
               transition={{ duration: 1.2 }}
               whileInView={{ opacity: 1, y: 0 }}

@@ -4,18 +4,14 @@ import { PhoneIcon, MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
 import { useForm, SubmitHandler } from "react-hook-form";
 
 interface ContactProps extends React.PropsWithChildren {
-  name: string;
-  email: string;
-  subject: string;
-  message: string;
+  name?: string;
+  email?: string;
+  subject?: string;
+  message?: string;
 }
 
 const Contact: React.FunctionComponent<ContactProps> = (): JSX.Element => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<ContactProps>();
+  const { register, handleSubmit } = useForm<ContactProps>();
   const onSubmit: SubmitHandler<ContactProps> = (formData) => {
     window.location.href = `mailto:mehrdad.azizkhani@gmail?subject=${formData.subject}&body=Hi, my name is ${formData.name}, ${formData.message}`;
   };
@@ -30,7 +26,7 @@ const Contact: React.FunctionComponent<ContactProps> = (): JSX.Element => {
         Contact Me
       </h3>
       <div className="flex flex-col space-y-10">
-        <h4 className="text-center text-4xl font-semibold">
+        <h4 className="px-4 text-center text-4xl font-semibold">
           I have got just what you need.{" "}
           <span className="underline decoration-[#f7ab0a]/50">Lets Talk.</span>
         </h4>

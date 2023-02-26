@@ -14,18 +14,17 @@ const BackgroundCircle: React.FunctionComponent<
       animate={{
         scale: [1, 2, 2, 3, 1],
         opacity: [0.1, 0.2, 0.4, 0.8, 0.1, 1],
-        borderRadius: ["20%", "20%", "50%", "80%", "20%"],
       }}
       transition={{
-        duration: 1.5,
+        duration: 3,
       }}
-      className="relative flex items-center justify-center"
+      className="absolute top-0 flex h-full items-center justify-center"
     >
-      <div className="absolute mt-52 h-[200px] w-[200px] animate-ping rounded-full border border-[#333333]" />
-      <div className="absolute mt-52 h-[300px] w-[300px] animate-ping rounded-full border border-[#333333]" />
-      <div className="absolute mt-52 h-[500px] w-[500px] animate-ping rounded-full border border-[#333333]" />
-      <div className="absolute mt-52 h-[650px] w-[650px] animate-pulse rounded-full border border-[#f7ab0a] opacity-20" />
-      <div className="absolute mt-52 h-[800px] w-[800px] animate-ping rounded-full border border-[#333333]" />
+      <div className="absolute my-auto h-[200px] w-[200px] animate-ping rounded-full border border-[#353535]" />
+      <div className="absolute my-auto h-[300px] w-[300px] animate-ping rounded-full border border-[#353535]" />
+      <div className="absolute my-auto h-[500px] w-[500px] animate-ping rounded-full border border-[#353535]" />
+      <div className="absolute my-auto h-[650px] w-[650px] animate-pulse rounded-full border border-[#f7ab0a] opacity-20" />
+      <div className="absolute my-auto h-[800px] w-[800px] animate-ping rounded-full border border-[#353535]" />
     </motion.div>
   );
 };
